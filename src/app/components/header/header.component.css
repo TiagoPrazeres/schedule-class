@@ -1,0 +1,19 @@
+img {
+  height: 4rem;
+}
+
+.header {
+  justify-content: center;
+  height: 10%;
+  background-color: rgb(128, 190, 190);
+}
+
+span {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  padding-left: 1rem;
+
+}

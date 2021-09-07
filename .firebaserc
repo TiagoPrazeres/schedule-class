@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "crud-angular-5621b": {
+      "hosting": {
+        "todo": [
+          "crud-angular-5621b"
+        ]
+      }
+    }
+  }
+}

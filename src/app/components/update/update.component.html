@@ -1,0 +1,39 @@
+<form [formGroup]="formulario">
+  <h1>Atualizar</h1>
+
+  <mat-form-field class="data-finalizar" appearance="fill">
+    <mat-label>Data</mat-label>
+    <input formControlName="data" [min]="todayDate" [(ngModel)]="todo.dataParaFinalizar" name="todo.dataParaFinalizar" matInput [matDatepicker]="dp3" [disabled]="true">
+    <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+    <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+  </mat-form-field>
+
+  <div class="form">
+    <mat-form-field class="form" appearance="fill">
+      <mat-label>Aluno</mat-label>
+      <input formControlName="nomeAluno" [(ngModel)]="todo.titulo" name="todo.titulo" matInput placeholder="">
+    </mat-form-field>
+    
+    <mat-form-field class="form" appearance="fill">
+      <mat-label>Hora</mat-label>
+      <input formControlName="hora" [(ngModel)]="todo.descricao" id="hora-cons" type="time" name="todo.descricao" min="00:00" max="24:00" matInput>
+    </mat-form-field>
+  
+    <!--
+    <mat-form-field class="form" appearance="fill">
+      <mat-label>Descrição</mat-label>
+      <input [(ngModel)]="todo.descricao" name="" matInput placeholder="">
+    </mat-form-field>-->
+
+    
+  </div>
+
+  <div class="button">
+    <button (click)="update()"  mat-mini-fab color="accent">
+      <mat-icon>update</mat-icon>
+    </button>
+    <button (click)="cancel()" mat-mini-fab color="warn">
+      <mat-icon>cancel</mat-icon>
+    </button>
+  </div>
+</form>
