@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   baseUrl: 'https://schedule-class-api.herokuapp.com/todos'
+  //baseUrl: 'http://localhost:8080/todos'
 };
 
 /*

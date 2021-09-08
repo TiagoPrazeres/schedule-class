@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Todo } from '../models/todo';
+import { map } from 'rxjs/operators';
 
 
 @Injectable({
@@ -21,7 +22,8 @@ export class TodoService {
   }
 
   findAll(): Observable<Todo[]> {
-    return this.http.get<Todo[]>(this.baseUrl);
+    return this.http.get<Todo[]>(this.baseUrl)
+    .pipe(map(lessons => lessons.sort((a,b) => new Date(a.dataParaFinalizar).getTime() - new Date(b.dataParaFinalizar).getTime())));
   }
 
   update(todo: Todo): Observable<Todo> {
